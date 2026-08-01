@@ -1,0 +1,26 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.salt.ai/deployments/api/
+type: Webhooks
+api: Salt AI Workflow Deployment API
+summary: >-
+  The Salt AI workflow deployment API returns execution results asynchronously
+  by POSTing to a caller-supplied callback URL. This is a single, caller-defined
+  webhook (the "callback") rather than a subscription-based event catalog; no
+  AsyncAPI document is published by the provider. Captured here as a Webhooks
+  surface, not fabricated into an AsyncAPI spec.
+delivery:
+  transport: http
+  method: POST
+  target: caller-supplied callback URL (the `callback` field on the execution request)
+  trigger: workflow execution completes
+webhooks:
+- name: execution.result
+  description: >-
+    Delivered when a deployed workflow execution finishes. The POST body carries
+    the workflow's output; it is correlated to the originating request by the
+    execution_id returned from the execution call.
+  correlation_id: execution_id
+notes:
+- No provider-published AsyncAPI document was found (docs, GitHub org, /asyncapi paths all absent).
+- The callback payload schema is not published in the deployment docs; not documented here to avoid fabrication.

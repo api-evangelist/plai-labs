@@ -1,7 +1,29 @@
 aid: plai-labs
 name: Plai Labs
-description: Plai Labs is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Plai Labs is the a16z-backed venture founded by ex-MySpace leaders Aber
+  Whitcomb and Jim Benedetto (with Chris DeWolfe); its plailabs.com domain now
+  redirects to Salt AI (salt.ai), the team's enterprise AI platform. Salt AI is
+  a visual plus full-code AI workflow platform positioned as "Contextual AI for
+  Regulated Enterprise" that deploys governed, auditable, model-agnostic AI
+  workflows inside a customer's own infrastructure (behind the firewall, zero
+  public data egress to external model providers, immutable audit trails) for
+  life sciences, financial services, energy, and public-sector customers.
+  Workflows built in the Salt visual builder can be deployed as production HTTP
+  APIs that execute asynchronously and return their results via a webhook
+  callback to a caller-supplied URL.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://framerusercontent.com/images/hzTNjbzAvRgyFTtaOqS9rM94NI.png
 url: https://raw.githubusercontent.com/api-evangelist/plai-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +31,84 @@ x-backed-by:
 - a16z
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-operating-as: Salt AI (salt.ai)
+x-identity-note: plailabs.com 302-redirects to getsalt.ai then 301 to salt.ai; Salt
+  AI is led by Plai Labs co-founder Aber Whitcomb (CEO) and Jim Benedetto (CTO).
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- AI Workflows
+- Agents
+- LLM
+- Enterprise
+- Regulated Industries
+- Life Sciences
+- Workflow Automation
+- No-Code
+apis:
+- name: Salt AI Workflow Deployment API
+  description: >-
+    Deploy a Salt AI workflow as a production HTTP API. A POST to the deployment
+    execution endpoint accepts a workflow_input map (per input node: value +
+    value_type such as RAW) and an optional callback URL; it responds
+    synchronously with an execution_id and delivers the workflow result
+    asynchronously via a webhook POST to the supplied callback URL.
+  humanURL: https://docs.salt.ai/deployments/api/
+  baseURL: https://salt-api-dev.salt.ai
+  tags:
+  - AI Workflows
+  - Deployment
+  - Webhooks
+  properties:
+  - type: Documentation
+    url: https://docs.salt.ai/
+  - type: APIReference
+    url: https://docs.salt.ai/deployments/api/
+  - type: Conventions
+    url: conventions/plai-labs-conventions.yml
+  - type: Webhooks
+    url: asyncapi/plai-labs-execution-webhook.yml
+common:
+- type: DomainSecurity
+  url: security/plai-labs-domain-security.yml
+- type: DeveloperPortal
+  url: https://docs.salt.ai/
+- type: Documentation
+  url: https://docs.salt.ai/
+- type: APIReference
+  url: https://docs.salt.ai/deployments/api/
+- type: GettingStarted
+  url: https://docs.salt.ai/getting-started/
+- type: Blog
+  url: https://www.salt.ai/blog
+- type: Support
+  url: https://www.salt.ai/contact
+- type: SignUp
+  url: https://app.salt.ai/signup
+- type: Login
+  url: https://app.salt.ai/login
+- type: TermsOfService
+  url: https://www.salt.ai/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.salt.ai/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/plailabs
+- type: Webhooks
+  url: asyncapi/plai-labs-execution-webhook.yml
+- type: Conventions
+  url: conventions/plai-labs-conventions.yml
+- type: LLMsTxt
+  url: llms/plai-labs-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

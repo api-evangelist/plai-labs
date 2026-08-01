@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: probed
+summary: >-
+  Probe of the /.well-known/ discovery surface across Plai Labs / Salt AI hosts.
+  No genuine well-known documents were found. The marketing and API hosts return
+  404 for every probed path. The console host (app.salt.ai) is a single-page app
+  whose server returns the SPA index HTML with HTTP 200 for ALL paths (a
+  catch-all), so those 200s are NOT real discovery documents and are recorded as
+  such rather than saved as raw files.
+hosts:
+- host: https://www.plailabs.com
+  note: 302-redirects to getsalt.ai then salt.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://getsalt.ai
+  note: 301-redirects to salt.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://salt.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://app.salt.ai
+  note: SPA catch-all returns index HTML (200) for all paths; not real documents
+  documents:
+  - {path: /.well-known/security.txt, status: 200, valid_document: false, note: SPA shell}
+  - {path: /.well-known/openid-configuration, status: 200, valid_document: false, note: SPA shell}
+  - {path: /.well-known/oauth-authorization-server, status: 200, valid_document: false, note: SPA shell}
+- host: https://salt-api-dev.salt.ai
+  note: workflow deployment API host
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /openapi.json, status: 404}
+  - {path: /openapi.yaml, status: 404}

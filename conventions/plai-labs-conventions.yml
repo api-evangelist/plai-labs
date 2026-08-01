@@ -1,0 +1,61 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.salt.ai/deployments/api/
+api: Salt AI Workflow Deployment API
+base_url: https://salt-api-dev.salt.ai
+summary: >-
+  Cross-cutting request/response semantics for the Salt AI workflow deployment
+  API, captured from the public deployment documentation. The API is an
+  asynchronous execution surface: a workflow is deployed to a unique endpoint,
+  invoked with a structured input map, and its result is returned out-of-band
+  via a webhook callback rather than in the HTTP response.
+execution_model:
+  style: asynchronous
+  invoke:
+    method: POST
+    path: /api/v1/deployments/{deployment_id}/executions/
+    description: Submit a workflow execution; responds immediately with an execution_id.
+  response:
+    field: execution_id
+    note: The synchronous response only acknowledges the execution; results are not inline.
+  result_delivery:
+    mechanism: webhook-callback
+    description: The workflow result is POSTed to the caller-supplied callback URL when execution completes.
+request_envelope:
+  callback:
+    field: callback
+    description: Caller-supplied URL that receives the asynchronous result.
+  workflow_input:
+    field: workflow_input
+    description: Map keyed by input node id; each value is an object with value + value_type.
+    value_types:
+    - id: RAW
+      description: Basic data types passed directly.
+      status: available
+    - id: REFERENCE
+      description: URL inputs.
+      status: coming-soon
+    - id: ASSET
+      description: Base64-encoded media.
+      status: coming-soon
+authentication:
+  documented: false
+  note: >-
+    The public deployment docs do not specify an authentication method (no API
+    keys, tokens, or headers are described). Auth is not captured here to avoid
+    fabrication; the app (app.salt.ai) uses Firebase-based sign-in for the
+    console. Revisit when Salt publishes API authentication docs.
+idempotency:
+  documented: false
+  note: No idempotency key/header is documented for the execution endpoint.
+pagination:
+  documented: false
+versioning:
+  scheme: uri-path
+  current: v1
+  evidence: /api/v1/ path prefix on the execution endpoint.
+error_envelope:
+  documented: false
+  note: No structured error catalog is published in the deployment docs.
+cross_links:
+  webhooks: asyncapi/plai-labs-execution-webhook.yml

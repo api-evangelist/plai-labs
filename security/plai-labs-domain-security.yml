@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: docs.salt.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  5 03:50:18 2026 GMT
+  hsts: false
+- host: salt-api-dev.salt.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  6 19:25:01 2026 GMT
+  hsts: false
+domains:
+- domain: salt.ai
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine
