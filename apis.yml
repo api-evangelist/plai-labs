@@ -34,7 +34,7 @@ x-tier-reason: portfolio-lead
 x-operating-as: Salt AI (salt.ai)
 x-identity-note: plailabs.com 302-redirects to getsalt.ai then 301 to salt.ai; Salt
   AI is led by Plai Labs co-founder Aber Whitcomb (CEO) and Jim Benedetto (CTO).
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
