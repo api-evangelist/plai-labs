@@ -46,6 +46,17 @@ tags:
 - Enterprise
 - Regulated Industries
 - Life Sciences
+- Workflow-Automation
+- No-Code
+tags_raw:
+- Company
+- Artificial Intelligence
+- AI Workflows
+- Agents
+- LLM
+- Enterprise
+- Regulated Industries
+- Life Sciences
 - Workflow Automation
 - No-Code
 apis:
@@ -59,6 +70,10 @@ apis:
   humanURL: https://docs.salt.ai/deployments/api/
   baseURL: https://salt-api-dev.salt.ai
   tags:
+  - AI Workflows
+  - Deployment
+  - Webhook
+  tags_raw:
   - AI Workflows
   - Deployment
   - Webhooks
