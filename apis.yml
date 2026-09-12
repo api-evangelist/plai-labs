@@ -98,6 +98,8 @@ apis:
   - type: Webhooks
     url: asyncapi/plai-labs-execution-webhook.yml
 common:
+- type: Website
+  url: https://www.salt.ai/
 - type: DomainSecurity
   url: security/plai-labs-domain-security.yml
 - type: DeveloperPortal
