@@ -57,7 +57,7 @@ tags:
 - Enterprise
 - Regulated Industries
 - Life Sciences
-- Workflow-Automation
+- Workflow Automation
 - No-Code
 tags_raw:
 - Company
@@ -70,6 +70,7 @@ tags_raw:
 - Life Sciences
 - Workflow Automation
 - No-Code
+- Workflow-Automation
 apis:
 - name: Salt AI Workflow Deployment API
   description: >-
