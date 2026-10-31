@@ -64,6 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Plai Labs is a company surfaced as a portfolio company of a16z and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Plai Labs is the a16z-backed venture founded by ex-MySpace leaders Aber Whitcomb and Jim Benedetto (with Chris DeWolfe); its plailabs.com domain now redirects to Salt AI (salt.ai), the team's enterprise AI platform. Salt AI is a visual plus full-code AI workflow platform positioned as "Contextual AI for Regulated Enterprise" that deploys governed, auditable, model-agnostic AI workflows inside a customer's own infrastructure (behind the firewall, zero public data egress to external model providers, immutable audit trails) for life sciences, financial services, energy, and public-sector customers. Workflows built in the Salt visual builder can be deployed as production HTTP APIs that execute asynchronously and return their results via a webhook callback to a caller-supplied URL.
 
-Backed by: a16z
+**Areas:** Company · Artificial Intelligence · AI Workflows · Agents · LLM · Enterprise · Regulated Industries · Life Sciences · Workflow Automation · No-Code
+
+## Plai Labs on APIs.io
+
+Everything profiled for Plai Labs is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/plai-labs/](https://apis.io/providers/plai-labs/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Salt AI Workflow Deployment API](https://apis.io/apis/plai-labs/salt-ai-workflow-deployment-api/) — Deploy a Salt AI workflow as a production HTTP API. A POST to the deployment execution endpoint accepts a workflow_input map (per input node: value +…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Plai Labs Execution Webhook](https://apis.io/asyncapis/plai-labs/plai-labs-execution-webhook/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Plai Labs Domain Security](https://apis.io/security/plai-labs/plai-labs-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.salt.ai/)
+- [Documentation](https://docs.salt.ai/)
+- [Getting started](https://docs.salt.ai/getting-started/)
+- [API reference](https://docs.salt.ai/deployments/api/)
+- [Sign up](https://app.salt.ai/signup)
+- [Support](https://www.salt.ai/contact)
+- [Blog](https://www.salt.ai/blog)
+- [Terms of service](https://www.salt.ai/terms-of-service)
+- [Privacy policy](https://www.salt.ai/privacy-policy)
+- [GitHub](https://github.com/plailabs)
+
+## API Evangelist rating
+
+**Kin Score 28.9** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 39.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 27.6 |
+
+**Agent readiness 17.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 10.3** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/plai-labs/](https://apis.io/providers/plai-labs/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Plai Labs: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/plai-labs/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
